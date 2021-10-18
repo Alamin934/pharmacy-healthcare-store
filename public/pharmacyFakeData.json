@@ -1,0 +1,164 @@
+[
+    {
+        "id": "9c29a1675917471eab787a4891a92b6a",
+        "urlImage": "https://i.ibb.co/98FPGHh/BROFEX.jpg",
+        "name": "Brofex",
+        "price": 3.15,
+        "title": "",
+        "description": "",
+        "rate": 4.7
+    },
+    {
+        "id": "ab397f866b0f48bab5f43de8525fc82f",
+        "urlImage": "https://i.ibb.co/CQwJ60R/sanitizer.jpg",
+        "name": "Savlon Sanitizer",
+        "price": 1.56,
+        "title": "",
+        "description": "",
+        "rate": 4.5
+    },
+    {
+        "id": "5b59e675c4d64208aa299e121487e1dc",
+        "urlImage": "https://i.ibb.co/G7N9pjW/loramex.jpg",
+        "name": "Loramex",
+        "price": 4.19,
+        "title": "",
+        "description": "",
+        "rate": 3.9
+    },
+    {
+        "id": "e57aaeb4fe8c4b3f9cfd104d3584deac",
+        "urlImage": "https://i.ibb.co/8xYfrPY/tools.jpg",
+        "name": "Stethoscope",
+        "price": 56,
+        "title": "",
+        "description": "",
+        "rate": 4.7
+    },
+    {
+        "id": "ef99814d165e4bf4a6ffafc4dd63d451",
+        "urlImage": "https://i.ibb.co/CWC3hvZ/Comet-500.jpg",
+        "name": "Comet-500",
+        "price": 4.25,
+        "title": "",
+        "description": "",
+        "rate": 4.9
+    },
+    {
+        "id": "3dc4f304485d4318b3951c675ac390ae",
+        "urlImage": "https://i.ibb.co/BwT1DfW/Gaptin.png",
+        "name": "Gaptin 100mg",
+        "price": 3.54,
+        "title": "",
+        "description": "",
+        "rate": 4.1
+    },
+    {
+        "id": "87ba2bcb902d43fd975f7b552dcc091c",
+        "urlImage": "https://i.ibb.co/qxwBRnV/famiclav.png",
+        "name": "Famiclav 200mg",
+        "price": 4.69,
+        "title": "",
+        "description": "",
+        "rate": 3.9
+    },
+    {
+        "id": "1c394f538b144b28b4a32787efa2a77c",
+        "urlImage": "https://i.ibb.co/dJVgCjT/favisol.jpg",
+        "name": "Gavisol",
+        "price": 12.25,
+        "title": "",
+        "description": "",
+        "rate": 4.2
+    },
+    {
+        "id": "ba60ba6fb1094b59963a3ae3ee8235d5",
+        "urlImage": "https://i.ibb.co/184CkDs/inflacet.jpg",
+        "name": "Inflacet-P",
+        "price": 8.96,
+        "title": "",
+        "description": "",
+        "rate": 4.8
+    },
+    {
+        "id": "1c394f538b144b28b4a32787efa2a77c",
+        "urlImage": "https://i.ibb.co/fryJkfY/anadol.jpg",
+        "name": "Anadol 100 SR",
+        "price": 3.59,
+        "title": "",
+        "description": "",
+        "rate": 4.7
+    },
+    {
+        "id": "ca932a858e594d70a2371e5e3fffb45a",
+        "urlImage": "https://i.ibb.co/yVWFk4P/ezykof.png",
+        "name": "Ezykof Plus",
+        "price": 9.99,
+        "title": "",
+        "description": "",
+        "rate": 4.4
+    },
+    {
+        "id": "6ffa42c84b8f4bb08ba5e3e73d3ae4d0",
+        "urlImage": "https://i.ibb.co/4PcLsNr/newstrip.jpg",
+        "name": "Newstrip Sterilized",
+        "price": 0.8,
+        "title": "",
+        "description": "",
+        "rate": 4.7
+    },
+    {
+        "id": "98f85dfec3ac4577aa28fa13fd91e001",
+        "urlImage": "https://i.ibb.co/b3MZ2jT/oxybliss.png",
+        "name": "Oxybliss 250mg",
+        "price": 3.99,
+        "title": "",
+        "description": "",
+        "rate": 4.0
+    },
+    {
+        "id": "aac99d4bae664053b7fedb924a94689c",
+        "urlImage": "https://i.ibb.co/TP0z8YM/cefimix.png",
+        "name": "Cefimix 200mg",
+        "price": 7,
+        "title": "",
+        "description": "",
+        "rate": 4.2
+    },
+    {
+        "id": "ab092f43408c4d56a9bb60b470a59372",
+        "urlImage": "https://i.ibb.co/zsv5Xps/21abc752fdb44b86234ef96bd4924fa3.jpg",
+        "name": "Contour Plus",
+        "price": 39.45,
+        "title": "",
+        "description": "",
+        "rate": 3.9
+    },
+    {
+        "id": "ff46c5f5d96e453b9953cd16e262bac6",
+        "urlImage": "https://i.ibb.co/B3hG4MY/Annabella.png",
+        "name": "Annabella",
+        "price": 5,
+        "title": "",
+        "description": "",
+        "rate": 4.6
+    },
+    {
+        "id": "fd82130e3a4a45b183f56762f21fc4ed",
+        "urlImage": "https://i.ibb.co/cgHSgg4/herbal.jpg",
+        "name": "Herbal Gargara",
+        "price": 3.55,
+        "title": "",
+        "description": "",
+        "rate": 4.8
+    },
+    {
+        "id": "6ffa42c84b8f4bb08ba5e3e73d3ae4b1",
+        "urlImage": "https://i.ibb.co/V9TgYR5/3ply-mask-2.jpg",
+        "name": "3ply Mask 10pc",
+        "price": 1,
+        "title": "",
+        "description": "",
+        "rate": 4.7
+    }
+]
