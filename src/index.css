@@ -1,13 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif!important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.text-succes{
+  color:#46d3ab!important;
+}
+.btn{
+  font-weight: 500!important;
+}
+.btn-success{
+  background-color:#46d3ab!important;
+  transition: .3s;
+  border-color: #58d2b0!important;
+}
+.btn-success:hover{
+  background-color:#161616!important;
+  border-color:#161616!important;
+}
+button:focus{
+  outline:none;
+  box-shadow: none!important;
+}
+a{
+  font-weight: 500;
+  color: #161616!important;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  margin-left: 15px;
+}
+.card:hover{
+  box-shadow: 0 .5rem 1rem #52927e33!important;
+  transition: .2sease-in-out;
+}
+.card:hover .card-title{
+  color: #58d2b0;
+  transition: .2s ease-in-out;
+}
+
+.footer a{
+  padding: 2px;
+  font-weight: 400;
+  font-size: 14px;
 }

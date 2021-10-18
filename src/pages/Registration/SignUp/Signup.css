@@ -1,0 +1,11 @@
+#signUp{
+    background-image: url('../../../images/signbackground.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#signUp .account{
+    text-decoration: none;
+    color: #fd1e1e!important;
+    margin-top: 15px
+}

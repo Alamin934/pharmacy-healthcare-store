@@ -4,26 +4,15 @@
         "urlImage": "https://i.ibb.co/98FPGHh/BROFEX.jpg",
         "name": "Brofex",
         "price": 3.15,
-        "title": "",
-        "description": "",
+        "description": "Liquid medicines include liquids, solutions, syrups and mixtures and are commonly used in patients that have difficulty swallowing medicines. They are also commonly used in children and the elderly. The liquid medicine should be made such that the dose needed will be a sensible volume such as 5mL (one teaspoon).",
         "rate": 4.7
-    },
-    {
-        "id": "ab397f866b0f48bab5f43de8525fc82f",
-        "urlImage": "https://i.ibb.co/CQwJ60R/sanitizer.jpg",
-        "name": "Savlon Sanitizer",
-        "price": 1.56,
-        "title": "",
-        "description": "",
-        "rate": 4.5
     },
     {
         "id": "5b59e675c4d64208aa299e121487e1dc",
         "urlImage": "https://i.ibb.co/G7N9pjW/loramex.jpg",
         "name": "Loramex",
         "price": 4.19,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 3.9
     },
     {
@@ -31,8 +20,7 @@
         "urlImage": "https://i.ibb.co/8xYfrPY/tools.jpg",
         "name": "Stethoscope",
         "price": 56,
-        "title": "",
-        "description": "",
+        "description": "Stethoscope, medical instrument used in listening to sounds produced within the body, chiefly in the heart or lungs. It was invented by the French physician R.T.H. Laënnec, who in 1819 described the use of a perforated wooden cylinder to transmit sounds from the patient's chest (Greek: stēthos) to the physician's ear.",
         "rate": 4.7
     },
     {
@@ -40,35 +28,31 @@
         "urlImage": "https://i.ibb.co/CWC3hvZ/Comet-500.jpg",
         "name": "Comet-500",
         "price": 4.25,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.9
-    },
-    {
-        "id": "3dc4f304485d4318b3951c675ac390ae",
-        "urlImage": "https://i.ibb.co/BwT1DfW/Gaptin.png",
-        "name": "Gaptin 100mg",
-        "price": 3.54,
-        "title": "",
-        "description": "",
-        "rate": 4.1
     },
     {
         "id": "87ba2bcb902d43fd975f7b552dcc091c",
         "urlImage": "https://i.ibb.co/qxwBRnV/famiclav.png",
         "name": "Famiclav 200mg",
         "price": 4.69,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 3.9
+    },
+    {
+        "id": "3dc4f304485d4318b3951c675ac390ae",
+        "urlImage": "https://i.ibb.co/BwT1DfW/Gaptin.png",
+        "name": "Gaptin 100mg",
+        "price": 3.54,
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
+        "rate": 4.1
     },
     {
         "id": "1c394f538b144b28b4a32787efa2a77c",
         "urlImage": "https://i.ibb.co/dJVgCjT/favisol.jpg",
         "name": "Gavisol",
         "price": 12.25,
-        "title": "",
-        "description": "",
+        "description": "Liquid medicines include liquids, solutions, syrups and mixtures and are commonly used in patients that have difficulty swallowing medicines. They are also commonly used in children and the elderly. The liquid medicine should be made such that the dose needed will be a sensible volume such as 5mL (one teaspoon).",
         "rate": 4.2
     },
     {
@@ -76,8 +60,7 @@
         "urlImage": "https://i.ibb.co/184CkDs/inflacet.jpg",
         "name": "Inflacet-P",
         "price": 8.96,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.8
     },
     {
@@ -85,17 +68,23 @@
         "urlImage": "https://i.ibb.co/fryJkfY/anadol.jpg",
         "name": "Anadol 100 SR",
         "price": 3.59,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.7
+    },
+    {
+        "id": "ab397f866b0f48bab5f43de8525fc82f",
+        "urlImage": "https://i.ibb.co/CQwJ60R/sanitizer.jpg",
+        "name": "Savlon Sanitizer",
+        "price": 1.56,
+        "description": "Savlon hand sanitizer provides protection against 100 disease causing germs including bacteria, yeast & viruses. Savlon Sanitizer kills 99.99% germs and keeps you safe and protected. Not only is it fun to use but also convenient to carry with you wherever you go. Each pen is good for 100+ sprays.",
+        "rate": 4.5
     },
     {
         "id": "ca932a858e594d70a2371e5e3fffb45a",
         "urlImage": "https://i.ibb.co/yVWFk4P/ezykof.png",
         "name": "Ezykof Plus",
         "price": 9.99,
-        "title": "",
-        "description": "",
+        "description": "Liquid medicines include liquids, solutions, syrups and mixtures and are commonly used in patients that have difficulty swallowing medicines. They are also commonly used in children and the elderly. The liquid medicine should be made such that the dose needed will be a sensible volume such as 5mL (one teaspoon).",
         "rate": 4.4
     },
     {
@@ -103,8 +92,7 @@
         "urlImage": "https://i.ibb.co/4PcLsNr/newstrip.jpg",
         "name": "Newstrip Sterilized",
         "price": 0.8,
-        "title": "",
-        "description": "",
+        "description": "Newstrip This Band aid one time bandage is useful. If you are a mechanical/Electrical technician needs band aids daily, actually several times daily.So i suggest you please keep it at your home/Office/ Industry.",
         "rate": 4.7
     },
     {
@@ -112,8 +100,7 @@
         "urlImage": "https://i.ibb.co/b3MZ2jT/oxybliss.png",
         "name": "Oxybliss 250mg",
         "price": 3.99,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.0
     },
     {
@@ -121,8 +108,7 @@
         "urlImage": "https://i.ibb.co/TP0z8YM/cefimix.png",
         "name": "Cefimix 200mg",
         "price": 7,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.2
     },
     {
@@ -130,8 +116,7 @@
         "urlImage": "https://i.ibb.co/zsv5Xps/21abc752fdb44b86234ef96bd4924fa3.jpg",
         "name": "Contour Plus",
         "price": 39.45,
-        "title": "",
-        "description": "",
+        "description": "The Ascensia Contour Plus (Bayer) is a clinically validated and 3-star blood glucose meter. Measurements are normally taken from the finger but alternative site testing is allowed and it is intended for both professional use and self-measurement.",
         "rate": 3.9
     },
     {
@@ -139,8 +124,7 @@
         "urlImage": "https://i.ibb.co/B3hG4MY/Annabella.png",
         "name": "Annabella",
         "price": 5,
-        "title": "",
-        "description": "",
+        "description": "Capsule A solid dosage form in which the drug is enclosed within either a hard or soft soluble container or shell made from a suitable form of gelatin. (capsule) A form for medicine that is taken by mouth. It usually has a shell made of gelatin with the medicine inside.",
         "rate": 4.6
     },
     {
@@ -148,8 +132,7 @@
         "urlImage": "https://i.ibb.co/cgHSgg4/herbal.jpg",
         "name": "Herbal Gargara",
         "price": 3.55,
-        "title": "",
-        "description": "",
+        "description": "Liquid medicines include liquids, solutions, syrups and mixtures and are commonly used in patients that have difficulty swallowing medicines. They are also commonly used in children and the elderly. The liquid medicine should be made such that the dose needed will be a sensible volume such as 5mL (one teaspoon).",
         "rate": 4.8
     },
     {
@@ -157,8 +140,7 @@
         "urlImage": "https://i.ibb.co/V9TgYR5/3ply-mask-2.jpg",
         "name": "3ply Mask 10pc",
         "price": 1,
-        "title": "",
-        "description": "",
+        "description": "These face masks are made of an outer layer of non woven fabric, a middle layer made of a filter fabric, and an inner layer made of a soft, skin gentle facial tissue. Fluid resistant, unlike cloth masks, to provide protection against large droplets or sprays of bodily fluids.",
         "rate": 4.7
     }
 ]
