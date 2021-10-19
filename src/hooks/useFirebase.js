@@ -3,14 +3,13 @@ import { useEffect, useState } from "react";
 import initializeAuthentication from "../components/FireBase/firebase.init";
 
 initializeAuthentication();
-const googleProvider = new GoogleAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
 
 const useFirebase = () => {
 
     const auth = getAuth();
 
     const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -59,7 +58,9 @@ const useFirebase = () => {
                 setUser(result.user);
                 // window.location.href = '/home';
                 setError('');
-            }).catch(error => {
+            })
+            .finally(() => setIsLoading(false))
+            .catch(error => {
                 setError(error.message);
             });
     }
@@ -74,29 +75,37 @@ const useFirebase = () => {
     };
 
     const signInUsingGoogle = () => {
+        const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
+            .finally(() => setIsLoading(false))
     };
     const signInUsingFacebook = () => {
+        const facebookProvider = new FacebookAuthProvider();
         return signInWithPopup(auth, facebookProvider)
+            .finally(() => setIsLoading(false))
     };
 
+    const logOut = () => {
+        setIsLoading(true);
+        signOut(auth)
+            .then(() => {
+                setUser({});
+                // window.location.reload();
+                // window.location.href = '/signin';
+            }).finally(() => setIsLoading(false))
+    }
+    //observe user state change
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
             }
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
         });
     }, [auth]);
-
-    const logOut = () => {
-        signOut(auth).then(() => {
-            setUser({});
-            // window.location.reload();
-            // window.location.href = '/signin';
-        }).catch((error) => {
-            setError(error.message)
-        });
-    }
 
 
     return {
@@ -111,7 +120,8 @@ const useFirebase = () => {
         handleSignIn,
         signInUsingGoogle,
         logOut,
-        signInUsingFacebook
+        signInUsingFacebook,
+        isLoading
     };
 };
 

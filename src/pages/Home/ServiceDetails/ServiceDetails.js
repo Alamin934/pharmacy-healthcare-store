@@ -31,20 +31,20 @@ const ServiceDetails = () => {
                     </Col>
                     <Col xs={12} md={4} className="border-start">
                         <div>
-                            <ul class="list-group list-group-flush mx-2">
-                                <li class="list-group-item">
+                            <ul className="list-group list-group-flush mx-2">
+                                <li className="list-group-item">
                                     <h4 className="text-center fw-bold">Order Summary</h4>
                                 </li>
-                                <li class="list-group-item">
+                                <li className="list-group-item">
                                     <h5 className="mb-0">Items Ordered: 0</h5>
                                 </li>
-                                <li class="list-group-item">
+                                <li className="list-group-item">
                                     <h6 className="mb-0">Total Price: 0</h6>
                                 </li>
-                                <li class="list-group-item">
+                                <li className="list-group-item">
                                     <h6 className="mb-0">Tax: 0</h6>
                                 </li>
-                                <li class="list-group-item border-bottom">
+                                <li className="list-group-item border-bottom">
                                     <h6 className="mb-0">Total: 0</h6>
                                 </li>
                             </ul>

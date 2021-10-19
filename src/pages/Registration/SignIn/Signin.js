@@ -8,6 +8,7 @@ const Signin = () => {
     let history = useHistory();
     let location = useLocation();
     let redirect_uri = location.state?.from || '/';
+
     const handleGoogleSignin = () => {
         signInUsingGoogle()
             .then(result => {
@@ -58,9 +59,6 @@ const Signin = () => {
                             </button>
                             <button type="submit" className="btn btn-light m-2 fw-bold" onClick={handleFacebookSignin}>
                                 <img src="https://i.ibb.co/gJHRWZq/facebook.jpg" style={{ width: '25px' }} alt="" /> Facebook Signin
-                            </button>
-                            <button type="submit" className="btn btn-light fw-bold" onClick={handleGoogleSignin}>
-                                <img src="https://i.ibb.co/JdFvSXq/github.png" style={{ width: '25px' }} alt="" /> GitHub Signin
                             </button>
                         </div>
                     </Col>
