@@ -29,9 +29,9 @@ function App() {
           <Route path="/about">
             <AboutUs></AboutUs>
           </Route>
-          <PrivateRoute path="/shop">
+          <Route path="/shop">
             <Shop></Shop>
-          </PrivateRoute>
+          </Route>
           <Route path="/signin">
             <SignIn></SignIn>
           </Route>
