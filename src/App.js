@@ -6,6 +6,8 @@ import NotFound from './pages/NotFound/NotFound';
 import AuthProvider from './components/contexts/AuthProvider';
 import SignIn from './pages/Registration/SignIn/SignIn';
 import SignUp from './pages/Registration/SignUp/SignUp';
+import ServiceDetails from './pages/Home/ServiceDetails/ServiceDetails';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -19,12 +21,15 @@ function App() {
           <Route exact path="/home">
             <Home></Home>
           </Route>
-          <Route exact path="/signin">
+          <Route path="/signin">
             <SignIn></SignIn>
           </Route>
-          <Route exact path="/signup">
+          <Route path="/signup">
             <SignUp></SignUp>
           </Route>
+          <PrivateRoute exact path="/service/:serviceId">
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

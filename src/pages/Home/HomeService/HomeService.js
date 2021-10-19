@@ -2,9 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 const HomeService = (props) => {
-    const { urlImage, name, price, description } = props.service;
+    const { id, urlImage, name, price, description } = props.service;
+
+    const history = useHistory();
+    const handleServiceDetail = () => {
+        history.push(`/service/${id}`);
+    }
     return (
         <div>
             <Col>
@@ -18,7 +24,7 @@ const HomeService = (props) => {
                                 <Card.Title className="fs-4">{name}</Card.Title>
                                 <Card.Text className="fst-italic mb-2">{description.slice(0, 55)}</Card.Text>
                                 <Card.Text className="fw-bold fs-5">$ {price}</Card.Text>
-                                <Button className="btn-success">See More <FontAwesomeIcon icon={faAngleDoubleRight} /></Button>
+                                <Button onClick={handleServiceDetail} className="btn-success">See More <FontAwesomeIcon icon={faAngleDoubleRight} /></Button>
                             </Card.Body>
                         </Col>
                     </Row>
