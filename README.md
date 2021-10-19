@@ -1,6 +1,6 @@
 # Pharma Store
 
-Live WebSite Link: [https://pharmacy-health-care.web.app/](https://pharmacy-health-care.web.app/).
+Live WebSite Link: [https://pharmacy-health-care.web.app/](https://pharmacy-health-care.web.app/)
 
 <ul>
     <li>It is basically a medicine store Website and For Selling health related products online.</li>
