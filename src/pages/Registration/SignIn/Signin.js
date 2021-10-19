@@ -46,11 +46,11 @@ const Signin = () => {
                             <FloatingLabel label="Password" className="mb-3">
                                 <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} required />
                             </FloatingLabel>
-                            {/*SUBMIT BUTTON */}
-                            <div>
-                                <Button onClick={userSignin} variant="btn btn-success d-block mb-3" size="lg" type="submit">Sign In</Button>
+                            <div className="d-flex">
                                 <NavLink to="/signup">New User? Create an account.</NavLink>
                             </div>
+                            {/*SUBMIT BUTTON */}
+                            <Button onClick={userSignin} variant="btn btn-success d-block mt-3" size="lg" type="submit">Sign In</Button>
                         </div>
                         {/* Error Message */}
                         {error && <div className="alert alert-danger mt-2" role="alert">{error}</div>}

@@ -26,11 +26,11 @@ const SignUp = () => {
                             <FloatingLabel label="Password" className="mb-3">
                                 <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} required />
                             </FloatingLabel>
-                            {/*SUBMIT BUTTON */}
-                            <div>
-                                <Button variant="btn btn-success d-block mb-3" size="lg" type="submit">Sign Up</Button>
+                            <div className="d-flex">
                                 <NavLink to="/signin">Already have an account?</NavLink>
                             </div>
+                            {/*SUBMIT BUTTON */}
+                            <Button variant="btn btn-success d-block mt-3" size="lg" type="submit">Sign Up</Button>
                             {/*ERROR ALERT */}
                             {error && <div className="mt-2 alert alert-danger" role="alert">{error}</div>}
                         </Form>
