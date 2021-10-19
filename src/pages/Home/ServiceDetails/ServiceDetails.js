@@ -18,17 +18,19 @@ const ServiceDetails = () => {
     return (
         <div className="py-5" id="service-details">
             <Container>
-                <Row className="">
+                <Row className="g-4">
+                    {/* SERVICE PRODUCT DETAILS */}
                     <Col xs={12} md={8}>
-                        <div className="hover border p-3 rounded w-75">
+                        <div className="hover border p-3 rounded img-width">
                             <img className="img-fluid" src={signleSerivecs?.urlImage} alt="" />
                         </div>
                         <h2 className="display-6 fw-bold mt-4">{signleSerivecs?.name}</h2>
-                        <p className="fst-italic text-muted" style={{ width: '80%' }}>{signleSerivecs?.description}</p>
+                        <p className="fst-italic text-muted card-description" style={{ width: '80%' }}>{signleSerivecs?.description}</p>
                         <h5>({signleSerivecs?.rate})</h5>
                         <h2 className="mt-3 fw-bold">$ {signleSerivecs?.price}</h2>
                         <button className="btn btn-success btn-lg px-4 mt-4"><span className="me-2"><FontAwesomeIcon icon={faShoppingCart} /> </span>Add To Cart</button>
                     </Col>
+                    {/* CART */}
                     <Col xs={12} md={4} className="border-start">
                         <div>
                             <ul className="list-group list-group-flush mx-2">

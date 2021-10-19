@@ -6,9 +6,11 @@ import { Col, Container, Row } from 'react-bootstrap';
 const AboutUs = () => {
     return (
         <div className="py-5" id="about-us">
+            {/* ABOUT US */}
             <Container>
                 <Row>
                     <Col>
+                        {/* SOME STORE DETAILS */}
                         <div className="pb-5 w-75 mx-auto about">
                             <h2 className="fw-bold display-6">About <span className="text-succes">Pharma Store</span></h2>
                             <p className="text-muted fst-italic">Welcome to Pharma Store, a convenient way for you to order commoneveryday medical and personal care items. Our team is made up of clinicians, researchers, financial experts and 1,200 direct sales representatives with outstanding expertise. They know the healthcare business from the bottom up and top down. <br />We’re happy to help. If you have any questions regarding a product or an order, please feel free to reach out to us at info@admin.com</p>
@@ -16,11 +18,13 @@ const AboutUs = () => {
                     </Col>
                 </Row>
             </Container>
+            {/* WHY CHOOSE US */}
             <Container className="text-center">
                 <div className="pb-5">
                     <h2 className="fw-bold display-6"><span className="text-succes">Why</span> Choose Us</h2>
                 </div>
                 <Row xs={1} md={2} lg={3} className="g-4">
+                    {/* SUPPORT */}
                     <Col>
                         <div className="shadow p-4">
                             <h1 className="text-succes">
@@ -30,6 +34,7 @@ const AboutUs = () => {
                             <p className="text-muted">We will give you 24/7 support service that is provided 24 hours a day and 7 days a week.</p>
                         </div>
                     </Col>
+                    {/* SHIPPING */}
                     <Col>
                         <div className="shadow p-4">
                             <h1 className="text-succes">
@@ -39,6 +44,7 @@ const AboutUs = () => {
                             <p className="text-muted">If you buy more than $300 from us then you will get free shipping your product</p>
                         </div>
                     </Col>
+                    {/* REFUND */}
                     <Col>
                         <div className="shadow p-4">
                             <h1 className="text-succes">

@@ -6,14 +6,17 @@ import './CarouselBanner.css';
 
 const CarouselBanner = () => {
     return (
+        /* HOME PAGE FIRST SECTION CAROUSEL */
         <div id="home-carousel">
             <Carousel>
+                {/* CAROUSEL ITEM ONE */}
                 <Carousel.Item interval={5000} className="carousel-item-1">
                     <img
                         className="d-block w-100"
                         src="https://i.ibb.co/NLXkLtw/slide2.png"
                         alt="First slide"
                     />
+                    {/* CAROUSEL ITEM TEXT */}
                     <Carousel.Caption>
                         <div>
                             <h1 className="display-4 fw-bold">We Help You</h1>
@@ -23,12 +26,14 @@ const CarouselBanner = () => {
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
+                {/* CAROUSEL ITEM TWO */}
                 <Carousel.Item interval={5000} className="carousel-item-2">
                     <img
                         className="d-block w-100"
                         src="https://i.ibb.co/WvWBnV5/bg-slider2-1.jpg"
                         alt="Second slide"
                     />
+                    {/* CAROUSEL TEXT */}
                     <Carousel.Caption>
                         <div>
                             <h1 className="display-4 fw-bold">Welcome</h1>
@@ -38,12 +43,14 @@ const CarouselBanner = () => {
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
+                {/* CAROUSEL ITEM THREE */}
                 <Carousel.Item interval={5000} className="carousel-item-3">
                     <img
                         className="d-block w-100"
                         src="https://i.ibb.co/zsV3sSp/slide1-2.png"
                         alt="Third slide"
                     />
+                    {/* CAROUSEL TEXT */}
                     <Carousel.Caption>
                         <div>
                             <h1 className="display-4 fw-bold">Free Your Self</h1>

@@ -4,18 +4,21 @@ import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useServices from '../../hooks/useServices';
+import './Shop.css';
 
 const Shop = () => {
     const { services } = useServices();
     return (
-        <div className="py-5">
+        <div className="py-5" id="shop">
             <Container>
                 <h2 className="fw-bold display-6 text-center pb-5">Welcome To <span className="text-succes">Pharma Store</span></h2>
-                <Row xs={1} md={3} lg={4} className="g-4">
+                <Row xs={1} md={2} lg={3} className="g-4">
                     {services?.map(service =>
                         <Col key={service.name}>
-                            <Card className="py-4 border-0 shadow" style={{ height: '420px' }}>
+                            <Card className="py-4 border-0 shadow">
+                                {/* CARD IMAGE */}
                                 <Card.Img className="w-75 mx-auto" src={service.urlImage} />
+                                {/* CARD TEXT DETAILS */}
                                 <Card.Body>
                                     <Card.Title className="fs-4">{service.name}</Card.Title>
                                     <Card.Text className="fst-italic mb-2">{service.description.slice(0, 55)}</Card.Text>
