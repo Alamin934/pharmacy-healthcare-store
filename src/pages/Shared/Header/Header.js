@@ -1,31 +1,31 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const style = {
-        color: "#58d2b0",
-        borderBottom: "3px solid #58d2b0"
-    }
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="md" bg="light">
                 <Container>
                     <Navbar.Brand className="ms-0">
-                        <Nav.Link as={NavLink} to="/">Pharma Store</Nav.Link>
+                        <Nav.Link as={NavLink} to="/" className="fw-bold fs-4">Pharma Store</Nav.Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link activeStyle={style} as={NavLink} to="/">Home</Nav.Link>
-                            <span className="d-block d-md-flex ">
-                                <Nav.Link activeStyle={style} as={NavLink} to="/signin" className="">SignIn</Nav.Link>
-                                <Nav.Link activeStyle={style} as={NavLink} to="/signup" className="">SignUp</Nav.Link>
-                            </span>
-                            <span className="d-block d-md-flex align-items-center">
-                                <button type="button" className="btn btn-success mx-2">Log Out</button>
-                                <span className="fw-bold">UserName</span>
-                            </span>
+                            <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
+                            {!user.email ?
+                                <span className="d-block d-md-flex ">
+                                    <Nav.Link as={NavLink} to="/signin" className="">SignIn</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/signup" className="">SignUp</Nav.Link>
+                                </span>
+                                : <span className="d-block d-md-flex align-items-center">
+                                    <button type="button" className="btn btn-success mx-2" onClick={logOut}>Log Out</button>
+                                    <span className="fw-bold">{user.displayName}</span>
+                                </span>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

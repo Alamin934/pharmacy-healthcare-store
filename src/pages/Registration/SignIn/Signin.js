@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap';
 import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import logo from '../../../images/logo2.png';
-import '../SignUp/Signup.css';
 
 const Signin = () => {
     const { handleEmailChange, handlePasswordChange, handleSignIn, error, signInUsingGoogle, setError, signInUsingFacebook } = useAuth();
@@ -33,27 +31,26 @@ const Signin = () => {
     return (
         <div className="py-5 text-center" id="signUp">
             <Container>
-                <div>
-                    <img src={logo} width="230" alt="" />
-                </div>
                 <Row>
-                    <Col md={7} className="mx-auto mt-5">
+                    <Col md={6} className="mx-auto mt-5">
                         <Form onSubmit={handleSignIn}>
-                            <FloatingLabel label="Email" className="mb-3">
-                                <Form.Control type="email" placeholder="Email" onBlur={handleEmailChange} />
+                            {/* INPUT EMAIL FIELD */}
+                            <FloatingLabel
+                                label="Email" className="mb-3">
+                                <Form.Control type="email" placeholder="Email" onBlur={handleEmailChange} required />
                             </FloatingLabel>
-
+                            {/* INPUT EMAIL FIELD */}
                             <FloatingLabel label="Password" className="mb-3">
-                                <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} />
+                                <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} required />
                             </FloatingLabel>
-
-                            <div className="d-grid mt-3">
-                                <Button type="submit" style={{ background: '#fd1e1e', border: 'none' }} variant="secondary" size="lg">Sign In</Button>
-                                <NavLink to="/signup" className="account">New User? Create an account.</NavLink>
+                            {/*SUBMIT BUTTON */}
+                            <div>
+                                <Button variant="btn btn-success d-block mb-3" size="lg" type="submit">Sign In</Button>
+                                <NavLink to="/signup">New User? Create an account.</NavLink>
                             </div>
                         </Form>
                         {/* Error Message */}
-                        {error && <div className="alert alert-danger" role="alert">{error}</div>}
+                        {error && <div className="alert alert-danger mt-2" role="alert">{error}</div>}
                         {/* Third Party login system*/}
                         <div className="mt-4">
                             <button type="submit" className="btn btn-light fw-bold" onClick={handleGoogleSignin}>

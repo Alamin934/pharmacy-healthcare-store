@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import useServices from '../../../hooks/useServices';
 import HomeService from '../HomeService/HomeService';
 
 const HomeServices = () => {
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        fetch('./PharmaFakeData.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, []);
+    const { services } = useServices();
     return (
         <div className="py-5 bg-light">
             <Container>

@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
-import initializeAuthentication from "../components/FIreBase/firebase.init";
+import initializeAuthentication from "../components/FireBase/firebase.init";
 
 initializeAuthentication();
 const googleProvider = new GoogleAuthProvider();
@@ -33,7 +33,6 @@ const useFirebase = () => {
     /* User Registraion Functionality */
     const handleRegistration = (e) => {
         e.preventDefault();
-        console.log(email, password);
         if (password.length < 6) {
             setError('Password must be atleast 6 character');
             return;
@@ -45,9 +44,8 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
-                console.log(result.user);
                 setUserName();
-                window.location.href = '/home';
+                // window.location.href = '/home';
                 setError('');
             }).catch(error => {
                 setError(error.message);
@@ -59,7 +57,7 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
-                window.location.href = '/home';
+                // window.location.href = '/home';
                 setError('');
             }).catch(error => {
                 setError(error.message);
@@ -93,8 +91,8 @@ const useFirebase = () => {
     const logOut = () => {
         signOut(auth).then(() => {
             setUser({});
-            window.location.reload();
-            window.location.href = '/signin';
+            // window.location.reload();
+            // window.location.href = '/signin';
         }).catch((error) => {
             setError(error.message)
         });
