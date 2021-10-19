@@ -1,10 +1,21 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+    const { user, setUser, logOut } = useAuth();
+
+    let history = useHistory();
+    let redirect_uri = '/';
+    /* REDIRECT TO HOME PAGE BY LOG OUT */
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                history.push(redirect_uri);
+                setUser({});
+            })
+    }
     return (
         <div>
             <Navbar collapseOnSelect expand="md" bg="light">
@@ -29,7 +40,7 @@ const Header = () => {
                                 </span>
                                 /* LOG OUT BUTTON & USER NAME */
                                 : <span className="d-block d-md-flex align-items-center">
-                                    <button type="button" className="btn btn-success mx-2" onClick={logOut}>Log Out</button>
+                                    <button type="button" className="btn btn-success mx-2" onClick={handleLogOut}>Log Out</button>
                                     <span className="fw-bold">{user.displayName}</span>
                                 </span>
                             }

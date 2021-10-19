@@ -4,11 +4,12 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Signin = () => {
-    const { handleEmailChange, handlePasswordChange, handleSignIn, error, signInUsingGoogle, setError, signInUsingFacebook } = useAuth();
+    const { handleEmailChange, handlePasswordChange, handleSignIn, error, signInUsingGoogle, setError, setUser } = useAuth();
+
     let history = useHistory();
     let location = useLocation();
     let redirect_uri = location.state?.from || '/';
-
+    /* GOOGLE SIGNIN REDIRECT */
     const handleGoogleSignin = () => {
         signInUsingGoogle()
             .then(result => {
@@ -18,13 +19,13 @@ const Signin = () => {
                 setError(error.message);
             })
     }
-    const handleFacebookSignin = () => {
-        signInUsingFacebook()
+    /* MANUALLY USER SIGNIN REDIRECT */
+    const userSignin = () => {
+        handleSignIn()
             .then(result => {
                 history.push(redirect_uri);
+                setUser(result.user);
                 setError('');
-            }).catch(error => {
-                setError(error.message);
             })
     }
 
@@ -32,9 +33,10 @@ const Signin = () => {
     return (
         <div className="py-5 text-center" id="signUp">
             <Container>
+                <h2 className="fw-bold display-6 text-center pb-3">Please <span className="text-succes">Sign In</span></h2>
                 <Row>
-                    <Col md={6} className="mx-auto mt-5">
-                        <Form onSubmit={handleSignIn}>
+                    <Col md={6} className="mx-auto">
+                        <div>
                             {/* INPUT EMAIL FIELD */}
                             <FloatingLabel
                                 label="Email" className="mb-3">
@@ -46,19 +48,16 @@ const Signin = () => {
                             </FloatingLabel>
                             {/*SUBMIT BUTTON */}
                             <div>
-                                <Button variant="btn btn-success d-block mb-3" size="lg" type="submit">Sign In</Button>
+                                <Button onClick={userSignin} variant="btn btn-success d-block mb-3" size="lg" type="submit">Sign In</Button>
                                 <NavLink to="/signup">New User? Create an account.</NavLink>
                             </div>
-                        </Form>
+                        </div>
                         {/* Error Message */}
                         {error && <div className="alert alert-danger mt-2" role="alert">{error}</div>}
                         {/* Third Party login system*/}
                         <div className="mt-4">
                             <button type="submit" className="btn btn-light fw-bold" onClick={handleGoogleSignin}>
                                 <img src="https://i.ibb.co/pKfFv9L/google-logo.png" style={{ width: '25px' }} alt="" /> Google Signin
-                            </button>
-                            <button type="submit" className="btn btn-light m-2 fw-bold" onClick={handleFacebookSignin}>
-                                <img src="https://i.ibb.co/gJHRWZq/facebook.jpg" style={{ width: '25px' }} alt="" /> Facebook Signin
                             </button>
                         </div>
                     </Col>

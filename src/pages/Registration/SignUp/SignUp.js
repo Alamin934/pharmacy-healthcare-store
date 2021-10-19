@@ -8,8 +8,9 @@ const SignUp = () => {
     return (
         <div className="py-5 text-center" id="signUp">
             <Container>
+                <h2 className="fw-bold display-6 text-center pb-3">Please <span className="text-succes">Sign Up</span></h2>
                 <Row>
-                    <Col md={6} className="mx-auto mt-5">
+                    <Col md={6} className="mx-auto">
                         <Form onSubmit={handleRegistration}>
                             {/* INPUT NAME FILED */}
                             <FloatingLabel

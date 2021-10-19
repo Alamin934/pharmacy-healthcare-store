@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../components/FireBase/firebase.init";
 
@@ -9,11 +9,11 @@ const useFirebase = () => {
     const auth = getAuth();
     /* STATE DECLARE */
     const [user, setUser] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
 
     /* Name Field Funtionality */
@@ -32,6 +32,7 @@ const useFirebase = () => {
     /* User Registraion Functionality */
     const handleRegistration = (e) => {
         e.preventDefault();
+        console.log(name, email, password);
         if (password.length < 6) {
             setError('Password must be atleast 6 character');
             return;
@@ -44,21 +45,14 @@ const useFirebase = () => {
             .then(result => {
                 setUser(result.user);
                 setUserName();
-                // window.location.href = '/home';
                 setError('');
             }).catch(error => {
                 setError(error.message);
             });
-    }
+    };
     /* User SignIn Funtionality */
-    const handleSignIn = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setUser(result.user);
-                // window.location.href = '/home';
-                setError('');
-            })
+    const handleSignIn = () => {
+        return signInWithEmailAndPassword(auth, email, password)
             .finally(() => setIsLoading(false))
             .catch(error => {
                 setError(error.message);
@@ -67,8 +61,9 @@ const useFirebase = () => {
 
     /* Registraion Set User Name Funtionality */
     const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(() => { })
+        updateProfile(auth.currentUser, {
+            displayName: name,
+        }).then(() => { })
             .catch((error) => {
                 setError(error.message)
             });
@@ -79,33 +74,23 @@ const useFirebase = () => {
         return signInWithPopup(auth, googleProvider)
             .finally(() => setIsLoading(false))
     };
-    /* User Facebook SignIn Funtionality */
-    const signInUsingFacebook = () => {
-        const facebookProvider = new FacebookAuthProvider();
-        return signInWithPopup(auth, facebookProvider)
-            .finally(() => setIsLoading(false))
-    };
     /* User Log Out Funtionality */
     const logOut = () => {
         setIsLoading(true);
-        signOut(auth)
-            .then(() => {
-                setUser({});
-                // window.location.reload();
-                // window.location.href = '/signin';
-            }).finally(() => setIsLoading(false))
+        return signOut(auth)
+            .finally(() => setIsLoading(false))
     }
     //observe user state change
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-            }
-            else {
-                setUser({})
+            } else {
+                setUser({});
             }
             setIsLoading(false);
         });
+        return () => unsubscribed;
     }, [auth]);
 
 
@@ -121,7 +106,6 @@ const useFirebase = () => {
         handleSignIn,
         signInUsingGoogle,
         logOut,
-        signInUsingFacebook,
         isLoading
     };
 };

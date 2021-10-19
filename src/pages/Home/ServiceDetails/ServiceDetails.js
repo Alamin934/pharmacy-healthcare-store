@@ -1,4 +1,4 @@
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -26,7 +26,7 @@ const ServiceDetails = () => {
                         </div>
                         <h2 className="display-6 fw-bold mt-4">{signleSerivecs?.name}</h2>
                         <p className="fst-italic text-muted card-description" style={{ width: '80%' }}>{signleSerivecs?.description}</p>
-                        <h5>({signleSerivecs?.rate})</h5>
+                        <h5><span className="text-warning"><FontAwesomeIcon icon={faStar} /></span>({signleSerivecs?.rate})</h5>
                         <h2 className="mt-3 fw-bold">$ {signleSerivecs?.price}</h2>
                         <button className="btn btn-success btn-lg px-4 mt-4"><span className="me-2"><FontAwesomeIcon icon={faShoppingCart} /> </span>Add To Cart</button>
                     </Col>

@@ -29,9 +29,6 @@ button:focus{
   outline:none;
   box-shadow: none!important;
 }
-.navbar-nav a{
-  color: #000!important;
-}
 a{
   font-weight: 500;
   color: #161616!important;
