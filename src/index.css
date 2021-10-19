@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif!important;
+  overflow-x: hidden!important;
 }
 
 code {
@@ -27,6 +28,9 @@ code {
 button:focus{
   outline:none;
   box-shadow: none!important;
+}
+.navbar-nav a{
+  color: #000!important;
 }
 a{
   font-weight: 500;
@@ -74,6 +78,9 @@ a{
   #service-details button{
     font-size: 1rem;
   }
+  .not-found img{
+    width: 65%!important;
+  }
 }
 @media screen and (max-width: 768px) {
   #about-us .about{
@@ -82,9 +89,15 @@ a{
   #service-details .card-description{
     width: 100%!important;
   }
+  .not-found img{
+    width: 70%!important;
+  }
 }
 @media screen and (max-width: 577px) {
   #service-details .img-width{
     width: 75%;
+  }
+  .not-found img{
+    width: 90%!important;
   }
 }

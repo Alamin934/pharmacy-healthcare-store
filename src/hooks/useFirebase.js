@@ -7,7 +7,7 @@ initializeAuthentication();
 const useFirebase = () => {
 
     const auth = getAuth();
-
+    /* STATE DECLARE */
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [name, setName] = useState('');
@@ -50,7 +50,7 @@ const useFirebase = () => {
                 setError(error.message);
             });
     }
-
+    /* User SignIn Funtionality */
     const handleSignIn = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
@@ -65,7 +65,7 @@ const useFirebase = () => {
             });
     }
 
-
+    /* Registraion Set User Name Funtionality */
     const setUserName = () => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(() => { })
@@ -73,18 +73,19 @@ const useFirebase = () => {
                 setError(error.message)
             });
     };
-
+    /* User Google Sign In Funtionality */
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
             .finally(() => setIsLoading(false))
     };
+    /* User Facebook SignIn Funtionality */
     const signInUsingFacebook = () => {
         const facebookProvider = new FacebookAuthProvider();
         return signInWithPopup(auth, facebookProvider)
             .finally(() => setIsLoading(false))
     };
-
+    /* User Log Out Funtionality */
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
