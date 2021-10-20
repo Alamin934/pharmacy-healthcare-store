@@ -1,8 +1,9 @@
-import { faShoppingCart, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import ReactStars from 'react-stars';
 import useServices from '../../../hooks/useServices';
 
 const ServiceDetails = () => {
@@ -14,6 +15,9 @@ const ServiceDetails = () => {
         const serviceDetails = services?.find(service => service.id === serviceId);
         setSignleSerivecs(serviceDetails);
     }, [serviceId, services]);
+    const ratingChanged = (newRating) => {
+        console.log(newRating)
+    }
 
     return (
         <div className="py-5" id="service-details">
@@ -25,29 +29,37 @@ const ServiceDetails = () => {
                             <img className="img-fluid" src={signleSerivecs?.urlImage} alt="" />
                         </div>
                         <h2 className="display-6 fw-bold mt-4">{signleSerivecs?.name}</h2>
-                        <p className="fst-italic text-muted card-description" style={{ width: '80%' }}>{signleSerivecs?.description}</p>
-                        <h5><span className="text-warning"><FontAwesomeIcon icon={faStar} /></span>({signleSerivecs?.rate})</h5>
-                        <h2 className="mt-3 fw-bold">$ {signleSerivecs?.price}</h2>
+                        <p className="fst-italic text-muted card-description mb-0" style={{ width: '80%' }}>{signleSerivecs?.description}</p>
+                        <div>
+                            <ReactStars
+                                count={5}
+                                onChange={ratingChanged}
+                                size={30}
+                                value={signleSerivecs?.rate}
+                                color2={'#ffc107'} />
+                        </div>
+
+                        <h2 className=" fw-bold">$ {signleSerivecs?.price}</h2>
                         <button className="btn btn-success btn-lg px-4 mt-4"><span className="me-2"><FontAwesomeIcon icon={faShoppingCart} /> </span>Add To Cart</button>
                     </Col>
                     {/* CART */}
                     <Col xs={12} md={4} className="border-start">
-                        <div>
-                            <ul className="list-group list-group-flush mx-2">
-                                <li className="list-group-item">
-                                    <h4 className="text-center fw-bold">Order Summary</h4>
+                        <div className="card">
+                            <ul className="list-group list-group-flush">
+                                <li className="list-group-item bg-light">
+                                    <h4 className="text-center fw-bold m-2 text-succes">Order Summary</h4>
                                 </li>
                                 <li className="list-group-item">
-                                    <h5 className="mb-0">Items Ordered: 0</h5>
+                                    <h6 className="mb-0">Items Ordered: 0</h6>
                                 </li>
                                 <li className="list-group-item">
-                                    <h6 className="mb-0">Total Price: 0</h6>
+                                    <h6 className="mb-0">Price: $0</h6>
                                 </li>
                                 <li className="list-group-item">
-                                    <h6 className="mb-0">Tax: 0</h6>
+                                    <h6 className="mb-0">Tax: $0</h6>
                                 </li>
-                                <li className="list-group-item border-bottom">
-                                    <h6 className="mb-0">Total: 0</h6>
+                                <li className="list-group-item">
+                                    <h5 className="mb-0 fw-bold">Total: $0</h5>
                                 </li>
                             </ul>
                         </div>
