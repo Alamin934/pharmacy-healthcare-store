@@ -19,12 +19,12 @@ const HomeService = (props) => {
                 <Card className="py-4 border-0 shadow">
                     <Row>
                         {/* CARD IMAGE */}
-                        <Col xs={12} md={5} lg={4} className="my-auto d-flex justify-content-center">
+                        <Col xs={12} md={5} lg={4} className="pe-md-0">
                             <Card.Img className="img-fluid" src={urlImage} />
                         </Col>
                         {/* CARD TEXT */}
                         <Col xs={12} md={7} lg={8}>
-                            <Card.Body>
+                            <Card.Body className="pt-md-0">
                                 <Card.Title className="fs-4">{name}</Card.Title>
                                 <Card.Text className="fst-italic mb-2">{description.slice(0, 55)}</Card.Text>
                                 <Card.Text className="fw-bold fs-5">$ {price}</Card.Text>

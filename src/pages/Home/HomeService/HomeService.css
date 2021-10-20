@@ -1,6 +1,13 @@
 
 @media screen and (max-width: 767px) {
     #home-service .card-img{
-      width: 350px!important;
+      width: 320px!important;
+      margin: 0px auto!important;
+      display: block;
+    }
+  }
+@media screen and (max-width: 450px) {
+    #home-service .card-img{
+      width: 280px!important;
     }
   }
