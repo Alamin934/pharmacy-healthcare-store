@@ -15,6 +15,7 @@ const ServiceDetails = () => {
         const serviceDetails = services?.find(service => service.id === serviceId);
         setSignleSerivecs(serviceDetails);
     }, [serviceId, services]);
+    /* REACT START RATING */
     const ratingChanged = (newRating) => {
         console.log(newRating)
     }
@@ -38,7 +39,6 @@ const ServiceDetails = () => {
                                 value={signleSerivecs?.rate}
                                 color2={'#ffc107'} />
                         </div>
-
                         <h2 className=" fw-bold">$ {signleSerivecs?.price}</h2>
                         <button className="btn btn-success btn-lg px-4 mt-4"><span className="me-2"><FontAwesomeIcon icon={faShoppingCart} /> </span>Add To Cart</button>
                     </Col>

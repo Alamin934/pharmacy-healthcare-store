@@ -3,11 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ReactStars from 'react-stars';
 import useServices from '../../hooks/useServices';
 import './Shop.css';
 
 const Shop = () => {
     const { services } = useServices();
+    /* REACT START RATING */
+    const ratingChanged = (newRating) => {
+        console.log(newRating)
+    }
     return (
         <div className="py-5" id="shop">
             <Container>
@@ -21,7 +26,15 @@ const Shop = () => {
                                 {/* CARD TEXT DETAILS */}
                                 <Card.Body>
                                     <Card.Title className="fs-4">{service.name}</Card.Title>
-                                    <Card.Text className="fst-italic mb-2">{service.description.slice(0, 55)}</Card.Text>
+                                    <Card.Text className="fst-italic mb-0">{service.description.slice(0, 55)}</Card.Text>
+                                    <div>
+                                        <ReactStars
+                                            count={5}
+                                            onChange={ratingChanged}
+                                            size={30}
+                                            value={service.rate}
+                                            color2={'#ffc107'} />
+                                    </div>
                                     <Card.Text className="fw-bold fs-5">$ {service.price}</Card.Text>
                                     <Link to={`/service/${service.id}`}>
                                         <Button className="btn-success">See More <FontAwesomeIcon icon={faAngleDoubleRight} /></Button>
